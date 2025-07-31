@@ -5,9 +5,9 @@ import clearIcon from '../assets/clear.png'
 // import cloudIcon from '../assets/cloud.png'
 // import rainIcon from '../assets/rain.png'
 // import drizzleIcon from '../assets/drizzle.png'
-// import humidityIcon from '../assets/humidity.png'
+import humidityIcon from '../assets/humidity.png'
 // import snowIcon from '../assets/snow.png'
-// import windIcon from '../assets/wind.png'
+import windIcon from '../assets/wind.png'
 
 const Weather = () => {
   return (
@@ -21,7 +21,18 @@ const Weather = () => {
       <p className='location'>Jakarta</p>
       <div className='weather-data'>
         <div className='col'>
-                  
+           <img src={humidityIcon} alt="humidity_icon" />      
+           <div>
+              <p> 91 %</p>
+              <span>Humidity</span>
+           </div>
+        </div>
+        <div className='col'>
+          <img src={windIcon} alt="wind_icon"/>
+          <div>
+            <p> 2.2 km/h</p>
+            <span>Wind Speed</span>
+          </div>
         </div>
       </div>
     </div>
