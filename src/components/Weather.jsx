@@ -10,6 +10,18 @@ import humidityIcon from '../assets/humidity.png'
 import windIcon from '../assets/wind.png'
 
 const Weather = () => {
+  const search = async (city) => { 
+    try {
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}
+      &appid=${import.meta.env.WEATHER_API_KEY}`;
+
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      
+    }
+  }
   return (
     <div className='weather'>
       <div className='search-bar'>
